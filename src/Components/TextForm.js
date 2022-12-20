@@ -49,16 +49,16 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-success mx-3" onClick={handleUpClick}>
-          Convert to UpperCase
+        <button className="btn btn-success mx-3 my-1" onClick={handleUpClick}>
+          Convert to UPPER Case
         </button>
-        <button className="btn btn-success mx-3" onClick={handleLoClick}>
-          Convert to LowerCase
+        <button  className="btn btn-success mx-3 my-1" onClick={handleLoClick}>
+          Convert to lower Case
         </button>
-        <button className="btn btn-danger mx-3" onClick={clearall}>
+        <button  className="btn btn-danger mx-1 my-1" onClick={clearall}>
           Clear
         </button>
-        <button className="btn btn-outline-primary mx-3" onClick={handleCopy}>
+        <button  className="btn btn-outline-primary mx-3 my-1" onClick={handleCopy}>
           Copy Text
         </button>
       </div>
@@ -68,7 +68,7 @@ export default function TextForm(props) {
       >
         <h3>Your Text Summary</h3>
         <p>
-          Your Text has <b>{text.split(" ").length}</b> words and{" "}
+          Your Text has <b>{text.split(" ").filter((e)=>{return e.length!==0}).length}</b> words and{" "}
           <b>{text.length}</b> characters
         </p>
         <p>
